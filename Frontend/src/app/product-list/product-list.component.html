@@ -1,0 +1,22 @@
+<h2>Product List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>MadeIn</th>
+            <th>Model</th>
+            <th>Cost</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of product">
+           <td>{{product.name}}</td>
+           <td>{{product.make}}</td>
+           <td>{{product.model}}</td>
+           <td>{{product.cost}}</td>
+          <!--<td>{{product.createddate}}</td>-->
+        </tr>
+    </tbody>
+</table>
+

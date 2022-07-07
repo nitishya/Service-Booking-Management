@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="logo">
+    <img src="../../assets/img/logo.png" alt="/home" width="80"/>
+    </div>
+  <nav>
+    <ul>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/register">Register</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/usermanagement">User Management</a></li>
+    <li><a routerLink="/productmanagement">Product Management</a></li>
+    <li><a routerLink="/servicebook">Service Booking</a></li>
+    <li><a routerLink="/profile">Profile</a></li>
+    </ul>
+    </nav>
+  </div>
+  <hr /><br>
+<h1> Login here </h1>
+  <form action="http://localhost:4200"method="post">
+
+    <div *ngIf='AuthError'>
+      <div  class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>{{errorMsg}}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)=closeErrorBox()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <div class="container"> 
+        <label>Username : </label> 
+        <input type="text" placeholder="Enter Username" id="username" name="name"  required="required" autocomplete="off" [(ngModel)]="userName">
+        <label>Password : </label> 
+        <input type="password" placeholder="Enter Password" id="password" name="password" required="required" autocomplete="off" [(ngModel)]="password">
+        <button type="submit" class="btn btn-login btn-success" (click)=login()>Login</button>
+        <input type="checkbox" checked="checked"> Remember me 
+        <button type="button" onclick="window.location.href='http://localhost:4200/login'"> Cancel</button> 
+    </div> 
+  </form>
+<router-outlet></router-outlet>

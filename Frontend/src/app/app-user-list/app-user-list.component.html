@@ -1,0 +1,19 @@
+<h2>User List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Registration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+           <td>{{user.name}}</td>
+           <td>{{user.mailId}}</td>
+           <td>{{user.mobile}}</td>
+           <td>{{user.regDate}}</td>
+        </tr>
+    </tbody>
+</table>
